@@ -26,7 +26,7 @@ See the demo project for more complex code.
 MIT License
 -----------
 
-    Copyright (c) 2013 Charles Scalesse.
+    Copyright (c) 2013 Archy. All rights reserved.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the

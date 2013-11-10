@@ -2,7 +2,7 @@
 //  UIView+archy.m
 //  Archy
 //
-//  Created by Rafael Aguilar Martín on 21/06/13.
+//  Created by Archy Team
 //  Copyright (c) 2013 Archy. All rights reserved.
 //
 
@@ -19,21 +19,26 @@
     return view;
 }
 
-- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat views:(NSDictionary *)autolayoutViews
+- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat
+                                        views:(NSDictionary *)autolayoutViews
 {
     for (NSString *stringConstraints in arrayVisualFormat) {
         [self addVisualFormatConstraints:stringConstraints views:autolayoutViews];
     }
 }
 
-- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat views:(NSDictionary *)autolayoutViews options:(NSLayoutFormatOptions)options metrics:(NSDictionary *)metrics
+- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat
+                                        views:(NSDictionary *)autolayoutViews
+                                      options:(NSLayoutFormatOptions)options
+                                      metrics:(NSDictionary *)metrics
 {
     for (NSString *stringConstraints in arrayVisualFormat) {
         [self addVisualFormatConstraints:stringConstraints views:autolayoutViews options:options metrics:metrics];
     }
 }
 
-- (void)addVisualFormatConstraints:(NSString *)visualFormatString views:(NSDictionary *)autolayoutViews
+- (void)addVisualFormatConstraints:(NSString *)visualFormatString
+                             views:(NSDictionary *)autolayoutViews
 {
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:visualFormatString
                                                                    options:0
@@ -43,7 +48,10 @@
     [self addConstraints:constraints];
 }
 
-- (void)addVisualFormatConstraints:(NSString *)visualFormatString views:(NSDictionary *)autolayoutViews options:(NSLayoutFormatOptions)options metrics:(NSDictionary *)metrics
+- (void)addVisualFormatConstraints:(NSString *)visualFormatString
+                             views:(NSDictionary *)autolayoutViews
+                           options:(NSLayoutFormatOptions)options
+                           metrics:(NSDictionary *)metrics
 {
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:visualFormatString
                                                                    options:options
@@ -88,6 +96,23 @@
     [elements enumerateKeysAndObjectsUsingBlock:^(NSString *key, id obj, BOOL *stop) {
         [self applyLayoutConstraintAlignAllCenterXView:obj];
     }];
+}
+
+#pragma mark Fit Superview
+- (void)applyLayoutConstraintFitSuperview:(UIView *)view
+{
+    [self applyLayoutConstraintFitSuperviewHorizontally:view];
+    [self applyLayoutConstraintFitSuperviewVertically:view];
+}
+
+- (void)applyLayoutConstraintFitSuperviewHorizontally:(UIView *)view
+{
+    [self addVisualFormatConstraints:@"|[view]|" views:NSDictionaryOfVariableBindings(view)];
+}
+
+- (void)applyLayoutConstraintFitSuperviewVertically:(UIView *)view
+{
+    [self addVisualFormatConstraints:@"V:|[view]|" views:NSDictionaryOfVariableBindings(view)];
 }
 
 @end

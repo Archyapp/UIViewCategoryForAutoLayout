@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name     = 'UIViewCategoryForAutoLayout'
-  s.version  = '0.0.1'
+  s.version  = '0.1.0'
   s.summary  = "A UIView Category for implement constraints with VFL(Visual Format Language)."
   s.description  = "A simple UIView Category for implement constraint with VFL(Visual Format Language)."
-  s.author   = {'Rafael Aguilar Martin' => 'rais38@gmail.com'}
+  s.author   = {'Archy Team' => 'contact@archyapp.com'}
   s.homepage = 'http://www.archyapp.com/'
-  s.source   = {:git => 'https://github.com/Archyapp/UIViewCategoryForAutoLayout.git', :tag => "0.0.1"}
+  s.source   = {:git => 'https://github.com/Archyapp/UIViewCategoryForAutoLayout.git', :tag => "0.1.0"}
   s.ios.deployment_target = '6.0'
   s.source_files   = 'Categories/*.{h,m}'
   s.license      = {

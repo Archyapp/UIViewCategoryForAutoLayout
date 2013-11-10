@@ -2,7 +2,7 @@
 //  UIView+archy.h
 //  Archy
 //
-//  Created by Rafael Aguilar Martín on 21/06/13.
+//  Created by Archy Team
 //  Copyright (c) 2013 Archy. All rights reserved.
 //
 
@@ -12,13 +12,22 @@
 
 #pragma mark - Autolayout
 + (id)newAutolayoutView;
-- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat views:(NSDictionary *)autolayoutViews;
-- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat views:(NSDictionary *)autolayoutViews options:(NSLayoutFormatOptions)options metrics:(NSDictionary *)metrics;
+- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat
+                                        views:(NSDictionary *)autolayoutViews;
+- (void)applyLayoutConstraintWithVisualFormat:(NSArray *)arrayVisualFormat
+                                        views:(NSDictionary *)autolayoutViews
+                                      options:(NSLayoutFormatOptions)options
+                                      metrics:(NSDictionary *)metrics;
 
 #pragma mark Center
 - (void)applyLayoutConstraintAlignAllCenterXView:(UIView *)view;
 - (void)applyLayoutConstraintAlignAllCenterYView:(UIView *)view;
 - (void)applyLayoutConstraintAlignAllCenterXToElements:(NSDictionary *)elements;
 - (void)applyLayoutConstraintAlignAllCenterYToElements:(NSDictionary *)elements;
+
+#pragma mark Fit Superview
+- (void)applyLayoutConstraintFitSuperview:(UIView *)view;
+- (void)applyLayoutConstraintFitSuperviewHorizontally:(UIView *)view;
+- (void)applyLayoutConstraintFitSuperviewVertically:(UIView *)view;
 
 @end

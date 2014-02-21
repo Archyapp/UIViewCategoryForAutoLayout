@@ -20,6 +20,7 @@
                                       metrics:(NSDictionary *)metrics;
 
 #pragma mark Center
+- (void)applyLayoutConstraintAlignAllCenterView:(UIView *)view;
 - (void)applyLayoutConstraintAlignAllCenterXView:(UIView *)view;
 - (void)applyLayoutConstraintAlignAllCenterYView:(UIView *)view;
 - (void)applyLayoutConstraintAlignAllCenterXToElements:(NSDictionary *)elements;

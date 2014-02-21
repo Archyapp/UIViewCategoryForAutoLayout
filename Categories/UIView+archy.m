@@ -62,6 +62,12 @@
 }
 
 #pragma mark Center
+- (void)applyLayoutConstraintAlignAllCenterView:(UIView *)view
+{
+    [self applyLayoutConstraintAlignAllCenterXView:view];
+    [self applyLayoutConstraintAlignAllCenterYView:view];
+}
+
 - (void)applyLayoutConstraintAlignAllCenterXView:(UIView *)view
 {
     [self addConstraint:[NSLayoutConstraint constraintWithItem:view

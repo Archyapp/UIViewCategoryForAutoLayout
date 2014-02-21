@@ -10,7 +10,7 @@ Setup Instructions
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects.
 
 ####Podfile
-	pod 'UIViewCategoryForAutoLayout', '~> 0.1.0'
+	pod 'UIViewCategoryForAutoLayout', '~> 0.1.1'
 
 ###Manual
 

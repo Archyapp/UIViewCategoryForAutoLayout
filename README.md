@@ -5,7 +5,7 @@ A simple UIView Category for implement constraint with [VFL(Visual Format Langua
 
 Setup Instructions
 ------------------
-###Cocoapods
+###CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects.
 
